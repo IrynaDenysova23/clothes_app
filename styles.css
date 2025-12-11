@@ -241,7 +241,7 @@ body {
 .cart-drawer {
     position: fixed;
     top: 0;
-    right: -400px;
+    right: -100%; /* Change from -400px to -100% */
     width: 100%;
     max-width: 400px;
     height: 100%;
@@ -252,6 +252,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 
 .cart-drawer.active {
     right: 0;
