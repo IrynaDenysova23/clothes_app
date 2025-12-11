@@ -476,3 +476,58 @@ body.cart-open {
         transform: translateX(0);
     }
 }
+
+/* Add to the top of your CSS file, in the * selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Update body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 50%, #fff5f5 100%);
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    position: relative;
+}
+
+/* Fix for mobile devices */
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure main content doesn't cause overflow */
+.main-content {
+    padding: 100px 20px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow-x: hidden; /* Add this */
+}
+
+/* Fix products grid on mobile */
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        width: 100%; /* Ensure it doesn't exceed viewport */
+    }
+    
+    .main-content {
+        padding: 90px 15px 30px;
+        width: 100%;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+}
+
